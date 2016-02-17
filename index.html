@@ -6,25 +6,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
         <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css"/>
-        <script src="js/jquery-2.1.4.js"></script>
-        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <!--<link rel="stylesheet" href="css/nativeDroid2-master/css/nativedroid2.css"/>
+        <link rel="stylesheet" href="css/nativeDroid2-master/css/nativedroid2.color.teal.css"/>-->
+
     </head>
     <body>
-        <div data-role="page">
+        <div data-role="page" data-theme="a">
 
             <div data-role="header">
-                <h1>Proyect Manager</h1>
+                <h1>Login</h1>
             </div>
-
             <div data-role="main" class="ui-content">
-               
+                <label for="user">Usuario</label>
+                <input type="text" name="user" id="user">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password">
+                <button class="ui-btn ui-corner-all ui-btn-inline" id='acceder'>Acceder</button>
             </div>
-
             <div data-role="footer">
                 <h1>Footer</h1>
             </div>
-
+            <div data-role="popup" id='popupCloseRight' class='ui-content' data-theme='b'> 
+                <a href='#' class='ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left' data-rel="back">Close</a>
+                <p>La combinación de usuario y contraseña no es válida</p>
+            </div>
         </div>
+
+        <script src="js/jquery-2.1.4.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>.
+        <script src="js/custom.plugins.js"></script>.
+        <script>
+            $(document).ready(function () {
+                $('#acceder').click(function () {
+                    $.authenticate($('#user').val(),$('#password').val(),function(response){
+                        var auth= response.error;
+                        if(auth){
+                            //todo Set cookie
+                        } else {
+                            $('#popupCloseRight').popup("open");
+                        }
+                    });
+                   
+                })
+            });
+        </script>
     </body>
-</body>
 </html>
