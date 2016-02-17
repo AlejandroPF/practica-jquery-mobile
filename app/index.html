@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css"/>
+        <link rel="stylesheet" href="../css/jquery.mobile.theme-1.4.5.min.css"/>
+        <!--<link rel="stylesheet" href="css/nativeDroid2-master/css/nativedroid2.css"/>
+        <link rel="stylesheet" href="css/nativeDroid2-master/css/nativedroid2.color.teal.css"/>-->
+    </head>
+    <body>
+        <div data-role="page" data-theme="a">
+
+            <div data-role="header">
+                <h1>App principal</h1>
+            </div>
+            Hacer algo por aqui
+        </div>
+
+        <script src="../js/jquery-2.1.4.js"></script>
+        <script src="../js/jquery.mobile-1.4.5.min.js"></script>.
+        <script src="../modules/jquery-jscookie/js/js-cookie-2.1.0.js"></script>.
+        <script src="../js/custom.plugins.js"></script>.
+        <script>
+            $(document).ready(function () {
+                $('#acceder').click(function () {
+                    $.authenticate($('#user').val(), $('#password').val(), function (response) {
+                        var auth = !response.error;
+                        if (auth) {
+                            Cookies.set("token", response.response);
+                            
+                        } else {
+                            $('#popupCloseRight').popup("open");
+                        }
+                    });
+
+                })
+            });
+        </script>
+    </body>
+</html>

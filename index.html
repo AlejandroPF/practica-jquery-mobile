@@ -34,14 +34,16 @@
 
         <script src="js/jquery-2.1.4.js"></script>
         <script src="js/jquery.mobile-1.4.5.min.js"></script>.
+        <script src="modules/jquery-jscookie/js/js-cookie-2.1.0.js"></script>.
         <script src="js/custom.plugins.js"></script>.
         <script>
             $(document).ready(function () {
                 $('#acceder').click(function () {
                     $.authenticate($('#user').val(),$('#password').val(),function(response){
-                        var auth= response.error;
+                        var auth= !response.error;
                         if(auth){
-                            //todo Set cookie
+                            Cookies.set("token",response.response);
+                            window.location.href= $.getCurrentDir() +"app/";
                         } else {
                             $('#popupCloseRight').popup("open");
                         }

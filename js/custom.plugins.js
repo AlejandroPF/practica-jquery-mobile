@@ -15,10 +15,15 @@
             url: source + "authenticate/",
             method: "get",
             data: data
-        }).success(function(response){
+        }).success(function (response) {
             successCallback(response)
-        }).error(function(){
+        }).error(function () {
             console.log("[ERROR] USER AUTH");
         });
+    };
+    $.getCurrentDir = function () {
+        var pathName = window.location.pathname;
+        return pathName.substring(0, pathName.lastIndexOf('/')) + "/"
+
     }
 }(jQuery));
