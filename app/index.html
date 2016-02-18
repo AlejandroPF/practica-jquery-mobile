@@ -1,41 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Gestión de proyectos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css"/>
         <link rel="stylesheet" href="../css/jquery.mobile.theme-1.4.5.min.css"/>
-        <!--<link rel="stylesheet" href="css/nativeDroid2-master/css/nativedroid2.css"/>
-        <link rel="stylesheet" href="css/nativeDroid2-master/css/nativedroid2.color.teal.css"/>-->
+        <link rel="stylesheet" href="../css/custom-jquery-ui-loader.css"/>
+
+        <!--<link rel="stylesheet" href="../css/nativeDroid2-master/css/nativedroid2.css"/>
+        <link rel="stylesheet" href="../css/nativeDroid2-master/css/nativedroid2.color.blue-grey.css"/>-->
+
     </head>
     <body>
         <div data-role="page" data-theme="a">
 
             <div data-role="header">
-                <h1>App principal</h1>
+                <a href="../index.html" data-icon="power" data-theme="b" class="ui-btn-right">Salir</a>
+                <h1>Gestión proyectos</h1>
             </div>
-            Hacer algo por aqui
+            <form>
+
+                <select name="cursos" id="cursos">
+                    <option value="">Selecciona curso</option>
+                </select>
+
+            </form>
+            <div data-role="collapsible">
+                    <h4>Heading</h4>
+                    <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
+            </div>
         </div>
 
         <script src="../js/jquery-2.1.4.js"></script>
         <script src="../js/jquery.mobile-1.4.5.min.js"></script>.
+        <script src="../js/"></script>.
         <script src="../modules/jquery-jscookie/js/js-cookie-2.1.0.js"></script>.
         <script src="../js/custom.plugins.js"></script>.
         <script>
-            $(document).ready(function () {
-                $('#acceder').click(function () {
-                    $.authenticate($('#user').val(), $('#password').val(), function (response) {
-                        var auth = !response.error;
-                        if (auth) {
-                            Cookies.set("token", response.response);
-                            
-                        } else {
-                            $('#popupCloseRight').popup("open");
-                        }
-                    });
 
-                })
+            $(document).ready(function () {
+                $.ajax({
+                    url: $.source + "cursos/",
+                    beforeSend: function () {
+                        $.loadingScreen('show');
+                    },
+                    complete: function () {
+                        $.loadingScreen('hide');
+                    }
+                }).success(function (data) {
+                    var cursos = data.cursos;
+                    for (var index = 0; index < cursos.length; index++) {
+                        var element = $('<option></option>');
+                        element.html(cursos[index].nombre);
+                        element.attr("value",cursos[index].id);
+                        $('#cursos').append(element);
+                    }
+                });
+                
+            });
+            $('#cursos').change(function(){
+               var curso = $(this).val();
+               if(curso.length > 0){
+                   $.ajax({
+                       url: $.source + "alumos/"+curso,
+                    beforeSend: function () {
+                        $.loadingScreen('show');
+                    },
+                    complete: function () {
+                        $.loadingScreen('hide');
+                    }
+                   })
+               }
             });
         </script>
     </body>

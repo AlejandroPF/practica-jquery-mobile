@@ -1,5 +1,5 @@
 (function ($) {
-    var source = "http://localhost/DIW/jquery-mobile-app-api/";
+    $.source = "http://localhost/DIW/jquery-mobile-app-api/";
     /**
      * Autentica al usuario y establece la cookie de inicio de sesión
      * @param {string} user Nombre de usuario
@@ -12,7 +12,7 @@
             password: password,
         };
         $.ajax({
-            url: source + "authenticate/",
+            url: $.source + "authenticate/",
             method: "get",
             data: data
         }).success(function (response) {
@@ -25,5 +25,11 @@
         var pathName = window.location.pathname;
         return pathName.substring(0, pathName.lastIndexOf('/')) + "/"
 
+    };
+    $.loadingScreen = function (status) {
+        $.mobile.loading(status, {
+            text: "Cargando",
+            textVisible: true
+        });
     }
 }(jQuery));
