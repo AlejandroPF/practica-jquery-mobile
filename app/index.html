@@ -13,35 +13,39 @@
 
     </head>
     <body>
-        <div data-role="page" data-theme="a">
+        <div data-role="page">
 
             <div data-role="header">
                 <a href="../index.html" data-icon="power" data-theme="b" class="ui-btn-right">Salir</a>
                 <h1>Gestión proyectos</h1>
             </div>
             <form>
+                <ul data-role='listview' data-filter="true" data-filter-placeholder="Buscar alumnos..." data-inset="true" id="alumnos">
+                    <li><a href="#">Aquilino</a></li>
+                    <li><a href="#">Burgundóforo</a></li>
+                    <li><a href="#">Cancionilo</a></li>
+                    <li><a href="#">Cristeta</a></li>
+                    <li><a href="#">Fedelepito</a></li>
 
-                <select name="cursos" id="cursos">
-                    <option value="">Selecciona curso</option>
-                </select>
-
+                </ul>    
             </form>
-            <div data-role="collapsible">
-                    <h4>Heading</h4>
-                    <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
-            </div>
+
         </div>
-
         <script src="../js/jquery-2.1.4.js"></script>
-        <script src="../js/jquery.mobile-1.4.5.min.js"></script>.
-        <script src="../js/"></script>.
-        <script src="../modules/jquery-jscookie/js/js-cookie-2.1.0.js"></script>.
-        <script src="../js/custom.plugins.js"></script>.
-        <script>
+        <script src="../js/jquery.mobile-1.4.5.min.js"></script>
 
-            $(document).ready(function () {
+
+        <script src="../modules/jquery-jscookie/js/js-cookie-2.1.0.js"></script>
+        <script src="../js/custom.plugins.js"></script>
+        <script src="../js/jqm-spinbox.js"></script>
+        <script>
+            $(document).on('pageloading', function () {
+                var token = Cookies.get("token");
                 $.ajax({
-                    url: $.source + "cursos/",
+                    url: $.source + "alumnos/",
+                    data: {
+                        token: token
+                    },
                     beforeSend: function () {
                         $.loadingScreen('show');
                     },
@@ -49,30 +53,16 @@
                         $.loadingScreen('hide');
                     }
                 }).success(function (data) {
-                    var cursos = data.cursos;
-                    for (var index = 0; index < cursos.length; index++) {
-                        var element = $('<option></option>');
-                        element.html(cursos[index].nombre);
-                        element.attr("value",cursos[index].id);
-                        $('#cursos').append(element);
+                    console.log(data);
+                    var alumnos = data.alumnos;
+                    for (var index = 0; index < alumnos.length; index++) {
+                        var content = "<li onclick='$(this).submit()'><a href='#'>" + alumnos[index].nombre + "</a></li>";
+                        $('#alumnos').append(content);
                     }
                 });
-                
             });
-            $('#cursos').change(function(){
-               var curso = $(this).val();
-               if(curso.length > 0){
-                   $.ajax({
-                       url: $.source + "alumos/"+curso,
-                    beforeSend: function () {
-                        $.loadingScreen('show');
-                    },
-                    complete: function () {
-                        $.loadingScreen('hide');
-                    }
-                   })
-               }
-            });
+
         </script>
+
     </body>
 </html>
