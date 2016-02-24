@@ -3,6 +3,7 @@
 #
 # Mas info: http://stackoverflow.com/questions/1441010/the-shortest-possible-output-from-git-log-containing-author-and-date
 #
+67ea654	Alejandro Peña                  Wed Feb 24 21:06:18 2016 +0100	Agregada documentación
 3d3746c	Alejandro Peña Florentín	Wed Feb 24 20:56:54 2016 +0100	Agregada exportación de base de datos
 04720ce	Alejandro Peña                  Wed Feb 24 20:49:56 2016 +0100	CSS personalizados ahora en archivo. Implementado nuevo tema de jquery-mobile
 70eb68a	Alejandro Peña                  Wed Feb 24 20:49:04 2016 +0100	Agregada evaluación
