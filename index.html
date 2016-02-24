@@ -41,15 +41,17 @@
         <script>
             $(document).ready(function () {
                 $('#acceder-form').submit(function (evt) {
-                    $.authenticate($('#user').val(), $('#password').val(), function (response) {
-                        var auth = !response.error;
-                        if (auth) {
-                            Cookies.set("token", response.response);
-                            window.location.href = $.getCurrentDir() + "app/";
-                        } else {
-                            $('#popupCloseRight').popup("open");
-                        }
-                    });
+                    /*$.authenticate($('#user').val(), $('#password').val(), function (response) {
+                     var auth = !response.error;
+                     if (auth) {
+                     Cookies.set("token", response.response);
+                     window.location.href = $.getCurrentDir() + "app/";
+                     } else {
+                     $('#popupCloseRight').popup("open");
+                     }
+                     });
+                     return false;*/
+                    window.location.href = $.getCurrentDir() + "app/";
                     return false;
                 });
             });
