@@ -1,0 +1,21 @@
+# Exportación del log de git mediante el siguiente comando
+# git log --pretty=format:"%h%x09%an%x09%ad%x09%s"
+#
+# Mas info: http://stackoverflow.com/questions/1441010/the-shortest-possible-output-from-git-log-containing-author-and-date
+#
+3d3746c	Alejandro Peña Florentín	Wed Feb 24 20:56:54 2016 +0100	Agregada exportación de base de datos
+04720ce	Alejandro Peña                  Wed Feb 24 20:49:56 2016 +0100	CSS personalizados ahora en archivo. Implementado nuevo tema de jquery-mobile
+70eb68a	Alejandro Peña                  Wed Feb 24 20:49:04 2016 +0100	Agregada evaluación
+9f4f3db	Alejandro Peña                  Wed Feb 24 20:08:50 2016 +0100	Ahora los textos del listview no se cortan
+21a0c61	Alejandro Peña Florentín	Wed Feb 24 20:00:30 2016 +0100	Agregado modulo jquery-mobile-spinbox. Agregada parte de evaluación
+669fbe4	Alejandro Peña Florentín	Wed Feb 24 19:59:58 2016 +0100	Eliminada autenticación con servidor
+2fafd9b	Alejandro Peña Florentín	Thu Feb 18 12:37:24 2016 +0100	La página principal ya muestra los cursos por ajax
+06926a2	Alejandro Peña Florentín	Thu Feb 18 10:53:46 2016 +0100	Modificado título
+e1ee07c	Alejandro Peña Florentín	Wed Feb 17 12:29:05 2016 +0100	Corregida autenticación Agregada pantalla principal
+8d012eb	Alejandro Peña Florentín	Wed Feb 17 10:34:47 2016 +0100	Agregado plugin js para establecer cookies
+1ea3b5d	Alejandro Peña Florentín	Wed Feb 17 10:34:14 2016 +0100	Creada autenticación
+9b9d167	Alejandro Peña Florentín	Wed Feb 17 10:31:31 2016 +0100	Modificado jquery-mobile
+b075801	Alejandro Peña Florentín	Mon Feb 8 13:24:36 2016 +0100	Agregado Index
+a16b163	Alejandro Peña Florentín	Fri Feb 5 12:33:42 2016 +0100	Agregado jquery mobile
+c870fcf	rortega81                       Thu Jan 28 12:04:03 2016 +0100	Update README.md
+27a9b8a	rortega81                       Thu Jan 28 12:03:00 2016 +0100	Initial commit
