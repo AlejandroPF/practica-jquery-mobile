@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gestión de proyectos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/jquery.mobile-1.4.5.min.css"/>
+        <link rel="stylesheet" href="../../css/custom-jquery-ui-loader.css"/>
+        <link rel="stylesheet" href="../../css/nativeDroid2-master/css/nativedroid2.css"/>
+        <link rel="stylesheet" href="../../css/nativeDroid2-master/css/nativedroid2.color.blue.css"/>
+        <link rel="stylesheet" href="../../css/style.css"/>
+    </head>
+    <body>
+        <div data-role="page">
+
+            <div data-role="header">
+                <a href="../" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all ui-btn-left ui-shadow"></a>
+                <a href="../../" class="ui-btn ui-icon-power ui-btn-icon-notext ui-corner-all ui-btn-right ui-shadow"></a>
+
+                <h1>Evaluación del proyecto</h1>
+            </div>
+            <div data-role="collapsible" data-iconpos="left"  data-iconshadow=true data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                <h3>Contenido del proyecto (6.5 pts)</h3>
+                <h4>Planteamiento</h4>
+                <ul data-role='listview' data-inset="true" >
+                    <li>
+
+                        <label>Objetivos</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+
+                        <label>Recursos utilizados</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+
+                        <label>Destinatarios</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+
+                        <label>Justificación del proyecto</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+                <h4>Contenido</h4>
+                <ul data-role='listview' data-inset="true" >
+                    <li>
+
+                        <label>Metodología seguida</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Claridad</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+
+                        <label>Actividades o acciones realizadas</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Documentación elaborada</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+                <h4>Resultados Obtenidos</h4>
+                <ul data-role='listview' data-inset="true">
+                    <li>
+                        <label>Conclusiones</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Objetivos conseguidos</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Grado de consecución</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Documentación elaborada</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-iconpos="left" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                <h3>Claridad de presentación (1 pto)</h3>
+                <ul data-role='listview' data-inset="true">
+                    <li>
+
+                        <label>Presentación escrita</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+
+                        <label>Redacción y claridad del texto</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+
+                        <label>Organización del contenido</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div data-role="collapsible" data-iconpos="left" data-shadow="false" data-corners="false" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+                <h3>Expresión Oral (2.5 ptos)</h3>
+                <ul data-role='listview' data-inset="true">
+                    <li>
+
+                        <label>Entrada del alumno</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+
+                        <label>Indumentaria</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+                <h4>Introducción</h4>
+                <ul data-role='listview' data-inset="true">
+                    <li>
+                        <label>¿Es atractiva?</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>¿Queda claro el proyecto?</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+                <h4>Desarrollo</h4>
+                <ul data-role='listview' data-inset="true">
+                    <li>
+                        <div data-role='controgroup'>
+                            <label>Orden en las ideas</label>
+                            <div class='jqm-spinbox'>
+                                <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div data-role='controgroup'>
+                            <label>Claridad en la exposición</label>
+                            <div class='jqm-spinbox'>
+                                <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div data-role='controgroup'>
+                            <label>Aclaración de términos técnicos</label>
+                            <div class='jqm-spinbox'>
+                                <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <h4>Conclusión</h4>  
+                <ul data-role='listview' data-inset="true">
+                    <li>
+
+                        <label>¿Queda claro el objetivo del proyecto?</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+
+                        <label>¿Lo vende bien?</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+
+                    <li>
+                        <label>Seguridad en lo que expone. La presentación está trabajada (power-point otros)</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Entusiasmo en lo que expone</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+                <h4>Expresión oral</h4>
+                <ul data-role='listview' data-inset='true'>
+                    <li>
+                        <label>Entonación</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Volumen</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Velocidad</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Vacilación en la voz</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Pausas</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Utilización de muletillas</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+                <h4>Duración</h4>
+                <ul data-role='listview' data-inset='true'>
+                    <li>
+                        <label>¿Se adecua a lo estipulado?</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+                <h4>Lenguaje no verbal</h4>
+                <ul data-role='listview' data-inset='true'>
+                    <li>
+                        <label>¿dirige la mirada a todo el auditorio?</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Sonrisa/expresión facial positiva</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Posición correcta del cuerpo</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                    <li>
+                        <label>Tics, gestos nerviosos</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+                <h4>Atención del público</h4>
+                <ul data-role='listview' data-inset='true'>
+                    <li>
+                        <label>¿Logra atraer la atención del público?</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+                <h4>Preguntas realizadas</h4>
+                <ul data-role='listview' data-inset='true'>
+                    <li>
+                        <label>¿Responde de forma coherente?</label>
+                        <div class='jqm-spinbox'>
+                            <input type="text" data-role="spinbox" value="5" min="0" max="10" data-mini='true' />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="ui-btn ui-btn-b ui-btn-inline custom-btn" id="send">Enviar</button>
+
+            <div data-role="footer" data-theme="b" >
+                <div data-role="footer" class="ui-bar" id="footer">    
+                    Copyright &copy; 2016 Alejandro Peña Florentín (alejandropenaflorentin@gmail.com)
+                </div>
+            </div>
+        </div>
+        <script src="../../js/jquery-2.1.4.js"></script>
+        <script src="../../js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="../../js/jquery-mouse-wheel.min.js"></script>
+        <script src="../../js/jqm-spinbox.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#send').click(function () {
+                    alert("Enviar datos al servidor");
+                })
+            });
+        </script>
+    </body>
+</html>
