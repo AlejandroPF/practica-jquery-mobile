@@ -7,62 +7,43 @@
         <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css"/>
         <link rel="stylesheet" href="../css/jquery.mobile.theme-1.4.5.min.css"/>
         <link rel="stylesheet" href="../css/custom-jquery-ui-loader.css"/>
-
-        <!--<link rel="stylesheet" href="../css/nativeDroid2-master/css/nativedroid2.css"/>
-        <link rel="stylesheet" href="../css/nativeDroid2-master/css/nativedroid2.color.blue-grey.css"/>-->
+        <link rel="stylesheet" href="../css/nativeDroid2-master/css/nativedroid2.css"/>
+        <link rel="stylesheet" href="../css/nativeDroid2-master/css/nativedroid2.color.blue.css"/>
+        <link rel="stylesheet" href="../css/style.css"/>
 
     </head>
     <body>
         <div data-role="page">
 
             <div data-role="header">
-                <a href="../index.html" data-icon="power" data-theme="b" class="ui-btn-right">Salir</a>
+                <a href="../" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all ui-btn-left ui-shadow"></a>
+                <a href="../" class="ui-btn ui-icon-power ui-btn-icon-notext ui-corner-all ui-btn-right ui-shadow"></a>
+
                 <h1>Gestión proyectos</h1>
             </div>
             <form>
                 <ul data-role='listview' data-filter="true" data-filter-placeholder="Buscar alumnos..." data-inset="true" id="alumnos">
-                    <li><a href="#">Aquilino</a></li>
-                    <li><a href="#">Burgundóforo</a></li>
-                    <li><a href="#">Cancionilo</a></li>
-                    <li><a href="#">Cristeta</a></li>
-                    <li><a href="#">Fedelepito</a></li>
+                    <li><a href="evaluacion">Aquilino</a></li>
+                    <li><a href="evaluacion">Burgundóforo</a></li>
+                    <li><a href="evaluacion">Cancionilo</a></li>
+                    <li><a href="evaluacion">Cristeta</a></li>
+                    <li><a href="evaluacion">Fedelepito</a></li>
 
                 </ul>    
             </form>
-
+            <div data-role="footer" data-theme="b" >
+                <div data-role="footer" class="ui-bar" id="footer">    
+                    Copyright &copy; 2016 Alejandro Peña Florentín (alejandropenaflorentin@gmail.com)
+                </div>
+            </div>
         </div>
         <script src="../js/jquery-2.1.4.js"></script>
         <script src="../js/jquery.mobile-1.4.5.min.js"></script>
 
-
         <script src="../modules/jquery-jscookie/js/js-cookie-2.1.0.js"></script>
         <script src="../js/custom.plugins.js"></script>
         <script src="../js/jqm-spinbox.js"></script>
-        <script>
-            $(document).on('pageloading', function () {
-                var token = Cookies.get("token");
-                $.ajax({
-                    url: $.source + "alumnos/",
-                    data: {
-                        token: token
-                    },
-                    beforeSend: function () {
-                        $.loadingScreen('show');
-                    },
-                    complete: function () {
-                        $.loadingScreen('hide');
-                    }
-                }).success(function (data) {
-                    console.log(data);
-                    var alumnos = data.alumnos;
-                    for (var index = 0; index < alumnos.length; index++) {
-                        var content = "<li onclick='$(this).submit()'><a href='#'>" + alumnos[index].nombre + "</a></li>";
-                        $('#alumnos').append(content);
-                    }
-                });
-            });
 
-        </script>
 
     </body>
 </html>
